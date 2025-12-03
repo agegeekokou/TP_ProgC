@@ -3,7 +3,7 @@
 int main()
 {
     int compteur = 5;   // Doit être strictement inférieur à 10
-    int i, j;
+    int i = 1, j;
 
     if (compteur >= 10)
     {
@@ -11,9 +11,10 @@ int main()
         return 0;
     }
 
-    for (i = 1; i <= compteur; i++)
+    while (i <= compteur)
     {
-        for (j = 1; j <= i; j++)
+        j = 1;
+        while (j <= i)
         {
             if (i == 3 && j == 2)
                 printf("# ");
@@ -21,8 +22,11 @@ int main()
                 printf("# ");
             else
                 printf("* ");
+
+            j++;
         }
         printf("\n");
+        i++;
     }
 
     return 0;
