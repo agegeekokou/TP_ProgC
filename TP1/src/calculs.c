@@ -4,60 +4,84 @@ int main() {
     int num1, num2;
     char op;
 
-    // Saisie des valeurs
-    printf("Entrez le premier entier : ");
-    scanf("%d", &num1);
+    // ===== TEST 1 : Addition =====
+    num1 = 10;
+    num2 = 5;
+    op = '+';
 
-    printf("Entrez le deuxième entier : ");
-    scanf("%d", &num2);
-
-    printf("Entrez un operateur (+, -, *, /, %%, &, |, ~) : ");
-    scanf(" %c", &op);  // espace avant %c pour ignorer le retour à la ligne
-
+    printf("Test 1 : %d %c %d = ", num1, op, num2);
     switch (op) {
-        case '+':
-            printf("Resultat : %d\n", num1 + num2);
-            break;
+        case '+': printf("%d\n", num1 + num2); break;
+    }
 
-        case '-':
-            printf("Resultat : %d\n", num1 - num2);
-            break;
+    // ===== TEST 2 : Soustraction =====
+    num1 = 10;
+    num2 = 3;
+    op = '-';
 
-        case '*':
-            printf("Resultat : %d\n", num1 * num2);
-            break;
+    printf("Test 2 : %d %c %d = ", num1, op, num2);
+    switch (op) {
+        case '-': printf("%d\n", num1 - num2); break;
+    }
 
-        case '/':
-            if (num2 != 0)
-                printf("Resultat : %d\n", num1 / num2);
-            else
-                printf("Erreur : division par zero !\n");
-            break;
+    // ===== TEST 3 : Multiplication =====
+    num1 = 4;
+    num2 = 6;
+    op = '*';
 
-        case '%':
-            if (num2 != 0)
-                printf("Resultat : %d\n", num1 % num2);
-            else
-                printf("Erreur : modulo par zero !\n");
-            break;
+    printf("Test 3 : %d %c %d = ", num1, op, num2);
+    switch (op) {
+        case '*': printf("%d\n", num1 * num2); break;
+    }
 
-        case '&':
-            printf("Resultat : %d\n", num1 & num2);
-            break;
+    // ===== TEST 4 : Division =====
+    num1 = 20;
+    num2 = 4;
+    op = '/';
 
-        case '|':
-            printf("Resultat : %d\n", num1 | num2);
-            break;
+    printf("Test 4 : %d %c %d = ", num1, op, num2);
+    switch (op) {
+        case '/': printf("%d\n", num1 / num2); break;
+    }
 
-        case '~':
-            printf("Resultat : %d\n", ~num1);
-            break;
+    // ===== TEST 5 : Modulo =====
+    num1 = 23;
+    num2 = 5;
+    op = '%';
 
-        default:
-            printf("Operateur invalide !\n");
+    printf("Test 5 : %d %c %d = ", num1, op, num2);
+    switch (op) {
+        case '%': printf("%d\n", num1 % num2); break;
+    }
+
+    // ===== TEST 6 : ET binaire =====
+    num1 = 10;
+    num2 = 5;
+    op = '&';
+
+    printf("Test 6 : %d %c %d = ", num1, op, num2);
+    switch (op) {
+        case '&': printf("%d\n", num1 & num2); break;
+    }
+
+    // ===== TEST 7 : OU binaire =====
+    num1 = 10;
+    num2 = 5;
+    op = '|';
+
+    printf("Test 7 : %d %c %d = ", num1, op, num2);
+    switch (op) {
+        case '|': printf("%d\n", num1 | num2); break;
+    }
+
+    // ===== TEST 8 : NON binaire =====
+    num1 = 10;
+    op = '~';
+
+    printf("Test 8 : %c%d = ", op, num1);
+    switch (op) {
+        case '~': printf("%d\n", ~num1); break;
     }
 
     return 0;
 }
-
-
